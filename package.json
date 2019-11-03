@@ -1,0 +1,28 @@
+{
+  "name": "gatsby-remark-replace",
+  "version": "0.1.0",
+  "description": "Find and replace variables in markdown (or MDX) files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "find",
+    "replace",
+    "remark",
+    "find",
+    "replace",
+    "gatsby",
+    "find",
+    "replace",
+    "substitute",
+    "supplant",
+    "swap"
+  ],
+  "author": "Gaurav Nelson",
+  "license": "ISC",
+  "dependencies": {
+    "escape-string-regexp": "^2.0.0",
+    "unist-util-visit": "^2.0.0"
+  }
+}
