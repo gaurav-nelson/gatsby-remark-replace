@@ -1,5 +1,5 @@
-import visit from 'unist-util-visit'
-import escapeStringRegexp from 'escape-string-regexp'
+var visit = require('unist-util-visit')
+var escapeStringRegexp = require('escape-string-regexp')
 
 module.exports = ({ markdownAST }, { replacements = {}, prefix = '%' }) => {
   // Attaches prefix to the start of the string.
