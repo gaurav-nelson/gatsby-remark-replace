@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-replace",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Find and replace variables in markdown files",
   "main": "index.js",
   "scripts": {
