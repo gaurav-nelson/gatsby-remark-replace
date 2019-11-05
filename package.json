@@ -1,7 +1,7 @@
 {
   "name": "gatsby-remark-replace",
   "version": "0.3.0",
-  "description": "Find and replace variables in markdown (or MDX) files",
+  "description": "Find and replace variables in markdown files",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

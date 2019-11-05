@@ -21,24 +21,14 @@ module.exports = ({ markdownAST }, { replacements = {}, prefix = '%' }) => {
 
   const replacer = (_match, name) => replacements[stripPrefix(name)]
 
-  visit(markdownAST, 'text', node => {
-    const processedText = node.value.replace(regexp, replacer)
-    node.value = processedText
-  })
-  
-  visit(markdownAST, 'code', node => {
-    const processedText = node.value.replace(regexp, replacer)
-    node.value = processedText
-  })
-  
-  visit(markdownAST, 'link', node => {
-    const processedText = node.value.replace(regexp, replacer)
-    node.value = processedText
-  })
-  
-  visit(markdownAST, 'inlineCode', node => {
-    const processedText = node.value.replace(regexp, replacer)
-    node.value = processedText
+  visit(markdownAST, ['text', 'html', 'code', 'inlineCode', 'link'], node => {
+    if (node.type === 'link'){
+      const processedText = node.url.replace(regexp, replacer)
+      node.url = processedText
+    } else {
+      const processedText = node.value.replace(regexp, replacer)
+      node.value = processedText
+    }
   })
   
   return markdownAST
